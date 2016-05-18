@@ -1,0 +1,90 @@
+﻿/* HTML ELEMENTS */
+body {
+    font-family: verdana, serif;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center; /* center all text in the header */
+    margin: auto; /* reduce huge vertical margins otherwise all content below too far down webpage */
+    text-shadow: 1px 4px 8px #333; /* great looking shadow except for i=*/
+    font: bold 45px Helvetica, Arial, Sans-serif; /* 65px/60px moves text up vertically */
+}
+
+h2 {
+    text-align: center;
+    color: mediumslateblue;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+button {
+    width: 130px;
+    height: 30px;
+    font-size: inherit;
+    border-radius: 7px;
+}
+
+a:link {
+    color: #FF00FF;
+}
+
+/* unvisited link */
+a:visited {
+    color: #0000FF;
+}
+
+/* visited link */
+a:hover {
+    color: #FF33FF;
+}
+
+/* mouse over link */
+a:active {
+    color: #0000FF;
+}
+
+/* selected link */
+
+#wrapper {
+    margin: auto; /* center all content on webpage */
+    width: 420px; /* width of entire game on webpage */
+}
+
+#gameCanvas {
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 7px;
+}
+
+#version {
+    font-size: 10pt;
+}
+
+.columns_3 {
+    clear: both; /* do not allow floating elements on either side */
+    width: 750px;
+    padding-top: 10px;
+}
+
+.ctrl_left {
+    width: 140px;
+    float: left;
+    text-align: center;
+}
+
+.scroll {
+    width: 400px;
+    margin-top: 30px;
+    margin-left: 5px;
+    background: steelblue;
+    color: yellow;
+    font-size: 16px;
+    /*text-align: center;*/
+    height: 18px;
+    padding: 10px;
+    border-radius: 7px;
+}

@@ -1,0 +1,56 @@
+﻿.theButtons {
+    float: left;
+    margin-left: 10px;
+}
+
+.buttonOn {
+    border-top: 1px solid #96d1f8;
+    background: #28597a;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 18px;
+    font-family: Calibri, serif;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 95px;
+}
+
+    .buttonOn:hover {
+        border-top-color: #28597a;
+        background: #28597a;
+        color: #ccc;
+        cursor: pointer;
+    }
+
+    .buttonOn:active {
+        border-top-color: #1b435e;
+        background: #1b435e;
+    }
+
+.buttonOff {
+    border-top: 1px solid #96d1f8;
+    background: grey;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 18px;
+    font-family: Calibri, serif;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 95px;
+}
+
+    .buttonOff:hover {
+        border-top-color: grey;
+        color: #ccc;
+        background: grey;
+        cursor: default;
+    }
+
+    .buttonOff:active {
+        border-top-color: grey;
+        background: grey;
+    }

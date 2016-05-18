@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lights Out</title>
+    <link href="http://www.mikektech.com/favicon.ico?v=2" rel="shortcut icon"/>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+    <link href="Css/Style.css" rel="stylesheet" type="text/css"/>
+    <link href="Css/StyleButton.css" rel="stylesheet"/>
+    <link href="Css/StyleDialog.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="wrapper">
+    <h1 id="title">Lights Out</h1>
+
+    <div>
+        <!-- Game canvas............................................... -->
+        <div id="gameCanvas">
+            <canvas id="canvas" width="400" height="400">Canvas not supported.
+            </canvas>
+        </div>
+
+    </div>
+
+    <!-- Buttons .......................................................... -->
+    <div class="theButtons">
+        <button id="btnNewGame" class="button">New</button>
+        <button id="btnReplayGame" class="button">Replay</button>
+        <button id="btnShowSolution" class="button">Solution</button>
+        <button id="btnHelp" class="button">Help</button>
+        <!--<button id="About" class="button">About</button>-->
+    </div>
+
+
+    <div class="columns_3">
+        <div class="ctrl_left">
+            <label for="boardSize">Board Side</label>
+            <select id="boardSize">
+                <option value="3" selected="selected">3</option>
+                <option selected="selected" value="5">5</option>
+            </select>
+        </div>
+        <div class="ctrl_left">
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty">
+                <option value="2" selected="selected">1</option>
+                <option value="3">2</option>
+                <option value="4">3</option>
+                <option value="10">4</option>
+                <option value="13">5</option>
+            </select>
+        </div>
+
+    </div>
+
+
+    <!-- Displays ......................................................... -->
+    <div class="columns_3">
+        <div id="moveCounterDiv" class="ctrl_left">
+            Moves: 0
+        </div>
+        <div id="timer" class="ctrl_left">
+            Elapsed 00:00
+        </div>
+        <div id="version" class="ctrl_left">
+            ver 1
+        </div>
+    </div>
+    <div class="scroll" id="scroll">Welcome</div>
+    <div class="columns_3" id="moveTrackerDiv" hidden="hidden"></div>
+</div>
+
+<!-- Help, Option, Login etc goes here..................................... -->
+<div id="help-dialog">
+    <!-- Trick to not get autofocus to work without warning i.e. needs and input to function-->
+    <input type="hidden" autofocus="autofocus"/>
+
+    <p>Lights Out is an HTML5 game. It is based on Tiger Toys electronic
+        Lights Out game. It is written in HTML5 canvas and JavaScript.</p>
+    <b>Game Objective:</b><br/>
+    You are presented with a board of lights. When a light is lit (on), it appears yellow.
+    When a new game is initiated, a random setting of lights will be lit.
+    Clicking on a light (whether lit or not) will toggle its state as well as the state
+    of the lights above and below and to the right and left of it.
+    Your goal is to turn-off all the lights.
+    <br/><br/>
+    <b>To Play:</b><br/>
+    1. Select the level difficulty. (1 is easiest 5 most difficult)<br/>
+    2. Press the New button to initialize the game and start the timer.<br/>
+    3. Click lights turned on until all lights are out.<br/><br/>
+    Each move you make is reported in Moves. When all lights are out the game so informs you
+    and the Elapsed timer is stopped.
+
+    At any time after pressing New button you can restart the game
+    from the beginning by pressing the Replay
+    Game button.
+
+    You can press See Solution to have the game step through and push the
+    buttons in order to turn off all the lights.<br/>
+    Need more help? Check Wikipedia:
+    <a target="_blank" href="http://en.wikipedia.org/wiki/Lights_Out_(game)">Lights Out (game)</a>
+</div>
+
+<!-- Sounds................................................................ -->
+<audio id="mouseDownSound" hidden="hidden">
+    <!--    <source src="Media/Blip.aac" type="audio/mp4" >-->
+    <source src="Media/Blip.mp3" type="audio/mpeg">
+    <source src="Media/Blip.ogg" type="audio/ogg">
+</audio>
+<audio id="gameOverSound" hidden="hidden">
+    <source src="Media/applause-8.mp3" type="audio/mpeg">
+    <source src="Media/applause-8.ogg" type="audio/ogg">
+</audio>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="Scripts/Utils.js"></script>
+<script src="Scripts/LightsOut.js"></script>
+</body>
+</html>
